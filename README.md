@@ -26,3 +26,10 @@ Leguaje de programación - Javascript
  ### Canvas
 
  ![canvas image](https://lh6.googleusercontent.com/WFj7PnMc_7jTowNvPAeeMOZ-Q8DyYMulJOy2v_g10hC_f0Rz9ejqaJVQ8C4ESBmmziyZ-kezUwQklfSqMq86GukjUnvwV5A9CU883i-LIxHKKPYyNy0Wa3UDJ22QZ4wUgomHQlva)
+
+ ### Arrays and Loops
+ los arrays son listas
+ los loops son fragmentos de código ejecutados una y otra vez limitadamente
+
+ ### Conditionals
+ if, algunas condición, else sino otra condición

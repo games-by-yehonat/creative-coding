@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays and Loops!</h1>
+    <canvas width="624" height="624"></canvas>
+
+    <script>
+        // object ref, selec any element ('element ref')
+        let canvas = document.querySelector('canvas');
+        let context = canvas.getContext('2d'); // any 2d or 3d
+
+        let canvasWidth = canvas.width;
+        let canvasHeigth = canvas.height;
+
+        let squareWidth = 256;
+        let squareheigth = 256;
+
+        let xPos = (canvasWidth / 2) - (squareWidth / 2);
+        let yPos = (canvasHeigth / 2) - (squareheigth / 2);
+
+        // x, y, width, height
+        // context.fillRect(100, 100, 400, 400);
+
+        // draw square
+        context.fillStyle = 'white'; // style
+        context.fillRect(xPos, yPos, squareWidth, squareheigth); // draw
+
+        context.lineWidth = 3;
+
+        context.beginPath();
+        context.rect(xPos, yPos, squareWidth, squareheigth);
+        // context.stroke();
+
+        // circle
+        context.beginPath();
+        
+        let xArcPos = canvasWidth / 2;
+        let yArcPos = canvasHeigth / 2;
+        let radius = 64;
+        let startAngle = 0;
+        let endAngle = Math.PI * 2;
+
+        // x, y, radius, startAngle, endAngle
+        context.arc(xArcPos, yArcPos, radius, startAngle, endAngle);
+        // context.stroke();
+
+        const length = 5;
+        const boxWidth = 64;
+        const boxHeigth = 64;
+        const gab = 16;
+        const offset = 8;
+
+        let x, y;
+
+        for (let i = 0; i < length; i++)
+        {
+            x = xPos + (boxWidth + gab) * i;
+
+            for (let j = 0; j < length; j++) {
+                
+                y = yPos + (boxHeigth + gab) * j;
+
+                context.beginPath();
+                context.rect(x, y, boxWidth, boxHeigth);
+                context.stroke();
+
+                if (Math.random() > 0.5) {
+                    context.beginPath();
+                    context.rect(x + offset, y + offset, boxWidth - offset * 2, boxHeigth - offset * 2);
+                    context.stroke();
+                }
+            }
+        }
+
+        // Math.random(); // 0...1;
+
+        // varibales
+        let m = 5;
+        let year = 2042;
+        let nextYear = 2042 + 1;
+
+        let dinner = 'pasta';
+        let sentence = 'Tonight, dinner will be ' + dinner;
+
+        // functions
+        function doSomething(param)
+        {
+            // console.log("something");
+            console.log(param);
+        }
+
+        doSomething(sentence);
+
+        function add(a, b)
+        {
+            return a + b;
+        }
+
+        let result = add(5, 7);
+        console.log(result);
+
+        // arrow function
+        let multiply = (a, b) =>
+        {
+            return a * b;
+        }
+
+        console.log(multiply(5, 7));
+
+        let years = [2040, 2041, 2042]
+        let menu = ['starter', 'main', 'dessert', 'drinks', 'sides']
+
+        for (let i = 0; i < years.length; i++) {
+            console.log(years[i]);
+        }
+
+        for (let i = 0; i < menu.length; i++) {
+            console.log(menu[i]);
+        }
+
+        const gravity = 9.81;
+        let velocity = 0.0;
+
+        menu.forEach(e =>
+        {
+            console.log(e);
+        })
+
+    </script>
+
+</body>
+</html>
