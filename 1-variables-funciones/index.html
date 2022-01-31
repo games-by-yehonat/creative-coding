@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <canvas width="624" height="624"></canvas>
+
+    <script>
+        // object ref, selec any element ('element ref')
+        let canvas = document.querySelector('canvas');
+        let context = canvas.getContext('2d'); // any 2d or 3d
+
+        let canvasWidth = canvas.width;
+        let canvasHeigth = canvas.height;
+
+        let squareWidth = 256;
+        let squareheigth = 256;
+
+        let xPos = (canvasWidth / 2) - (squareWidth / 2);
+        let yPos = (canvasHeigth / 2) - (squareheigth / 2);
+
+        // x, y, width, height
+        // context.fillRect(100, 100, 400, 400);
+
+        // draw square
+        context.fillStyle = 'blue'; // style
+        context.fillRect(xPos, yPos, squareWidth, squareheigth); // draw
+
+        context.lineWidth = 5;
+
+        context.beginPath();
+        context.rect(xPos, yPos, squareWidth, squareheigth);
+        context.stroke();
+
+        // circle
+        context.beginPath();
+        
+        let xArcPos = canvasWidth / 2;
+        let yArcPos = canvasHeigth / 2;
+        let radius = 64;
+        let startAngle = 0;
+        let endAngle = Math.PI * 2;
+
+        // x, y, radius, startAngle, endAngle
+        context.arc(xArcPos, yArcPos, radius, startAngle, endAngle);
+        context.stroke();
+
+        // varibales
+        let x = 5;
+        let year = 2042;
+        let nexYear = 2042 + 1;
+
+        let dinner = 'pasta';
+        let sentence = 'Tonight, dinner will be ' + dinner;
+
+        // functions
+        function doSomething(param)
+        {
+            // console.log("something");
+            console.log(param);
+        }
+
+        doSomething(sentence);
+
+        function add(a, b)
+        {
+            return a + b;
+        }
+
+        let result = add(5, 7);
+        console.log(result);
+
+        // arrow function
+        let multiply = (a, b) =>
+        {
+            return a * b;
+        }
+
+        console.log(multiply(5, 7));
+
+    </script>
+
+</body>
+</html>
