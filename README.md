@@ -37,4 +37,5 @@ Leguaje de programación - Javascript
  ### NPM Canvas-sketch
  - [NPM](https://www.npmjs.com/)
  - [canvas-sketch](https://github.com/mattdesl/canvas-sketch)
- - [Matt deslauriers](https://www.npmjs.com/)
+ - [Matt deslauriers](https://www.mattdesl.com/)
+ - [canvas-sketch-util](https://github.com/mattdesl/canvas-sketch-util)
