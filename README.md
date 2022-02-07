@@ -39,3 +39,6 @@ Leguaje de programación - Javascript
  - [canvas-sketch](https://github.com/mattdesl/canvas-sketch)
  - [Matt deslauriers](https://www.mattdesl.com/)
  - [canvas-sketch-util](https://github.com/mattdesl/canvas-sketch-util)
+
+ ### NPMY tweakpane
+ - [tweakpane](https://cocopon.github.io/tweakpane/)
