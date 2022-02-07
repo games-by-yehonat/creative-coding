@@ -5,11 +5,12 @@ const random = require('canvas-sketch-util/random');
 
 // grid
 const settings = {
-  dimensions: [ 1080, 1080 ]
+  dimensions: [ 1080, 1080 ],
+  animate: true
 };
 
 const sketch = () => {
-  return ({ context, width, height }) => {
+  return ({ context, width, height, frame }) => {
     context.fillStyle = 'white';
     context.fillRect(0, 0, width, height); 
 
@@ -35,12 +36,20 @@ const sketch = () => {
       let w = cellWidth * 0.8;
       let h = cellHeigth * 0.8;
 
+      
+      let n = random.noise2D(x + frame * 100, y, 0.001, 0.2);
+      let angle = n * Math.PI;
+      // let scale = (n + 1) / 2 * 30;
+      // let scale = (n * 0.5 + 0.5) * 30;
+      let scale = math.mapRange(n, -1, 1, 1, 30);
+
       context.save();
       context.translate(x, y);
       context.translate(marginX, marginY);
       context.translate(cellWidth * 0.5, cellHeigth * 0.5);
+      context.rotate(angle);
 
-      context.lineWidth = 5;
+      context.lineWidth = scale;
 
       context.beginPath();
       context.moveTo(w * -0.5, 0);
