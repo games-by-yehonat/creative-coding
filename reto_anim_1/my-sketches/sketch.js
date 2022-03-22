@@ -45,6 +45,7 @@ const sketch = ({ context, width, height }) => {
     
 // Off-white background
   context.fillStyle = 'white';
+  context.lineWidth = 10;
   // context.strokeStyle = '#f8f8f8'
   context.fillRect(0, 0, width, height);
 
@@ -81,7 +82,7 @@ class Agent {
     context.save();
     context.translate(this.pos.x, this.pos.y);
 
-    context.lineWidth = 10;
+    // context.lineWidth = 10;
 
     context.beginPath();
     context.rect(0, 0, this.width, this.height);
